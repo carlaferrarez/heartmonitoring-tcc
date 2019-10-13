@@ -76,8 +76,6 @@ echo '
 <meta http-equiv="refresh" content="1" />
 <img src="teste.png" title="Graph 2" />
 <img src="teste2.png" title="Graph 2" />
-
-<span> oioioioi </span>
 </html>
 ';
 ?>
