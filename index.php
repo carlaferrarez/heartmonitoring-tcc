@@ -109,6 +109,7 @@ text/css" href="css/util.css">
     <div class="contact1-responsiveGraphDiv" style="display: grid; margin-bottom: 40px;">
      <img class="contact1-responsiveGraph" src="teste.png" title="Graph" />
      <img class="contact1-responsiveGraph" src="teste2.png" title="Graph 2" />
+     <img class="contact1-responsiveGraph" src="teste3.png" title="Graph 3" />
     </div>
    </div>
    
