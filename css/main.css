@@ -1,7 +1,4 @@
 
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -31,61 +28,61 @@
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
+ margin: 0px; 
+ padding: 0px; 
+ box-sizing: border-box;
 }
 
 body, html {
-	height: 100%;
-	font-family: Montserrat-Regular, sans-serif;
+ height: 100%;
+ font-family: Montserrat-Regular, sans-serif;
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Montserrat-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+ font-family: Montserrat-Regular;
+ font-size: 14px;
+ line-height: 1.7;
+ color: #666666;
+ margin: 0px;
+ transition: all 0.4s;
+ -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
 }
 
 a:focus {
-	outline: none !important;
+ outline: none !important;
 }
 
 a:hover {
-	text-decoration: none;
-	color: #57b846;
+ text-decoration: none;
+ color: #57b846;
 }
 
 /*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
+ margin: 0px;
 }
 
 p {
-	font-family: Montserrat-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
+ font-family: Montserrat-Regular;
+ font-size: 14px;
+ line-height: 1.7;
+ color: #666666;
+ margin: 0px;
 }
 
 ul, li {
-	margin: 0px;
-	list-style-type: none;
+ margin: 0px;
+ list-style-type: none;
 }
 
 
 /*---------------------------------------------*/
 input {
-	outline: none;
-	border: none;
+ outline: none;
+ border: none;
 }
 
 textarea {
@@ -109,17 +106,17 @@ textarea:-ms-input-placeholder { color: #999999; }
 
 /*---------------------------------------------*/
 button {
-	outline: none !important;
-	border: none;
-	background: transparent;
+ outline: none !important;
+ border: none;
+ background: transparent;
 }
 
 button:hover {
-	cursor: pointer;
+ cursor: pointer;
 }
 
 iframe {
-	border: none !important;
+ border: none !important;
 }
 
 
@@ -197,6 +194,16 @@ iframe {
   padding-bottom: 44px;
 }
 
+.contact1-title {
+  display: block;
+  font-family: Montserrat-ExtraBold;
+  font-size: 24px;
+  color: #C71585;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 44px;
+}
+
 input.input1 {
   height: 50px;
   border-radius: 25px;
@@ -215,7 +222,8 @@ textarea.input1 + .shadow-input1 {
   border-radius: 25px;
 }
 
-/*---------------------------------------------*/
+/*------------------------------------------
+---*/
 .wrap-input1 {
   position: relative;
   width: 100%;
@@ -328,6 +336,11 @@ textarea.input1 + .shadow-input1 {
 [ Responsive ]*/
 
 @media (max-width: 720px) {
+  .container-contact1 {
+    padding: 90px 80px 88px 90px;
+    justify-content: center;
+  }
+
   .contact1-pic {
     width: 33.5%;
     display: contents;
@@ -337,20 +350,34 @@ textarea.input1 + .shadow-input1 {
     width: 44%;
     display: contents;
   }
-}
 
-@media (max-width: 720px) {
-  .container-contact1 {
-    padding: 90px 80px 88px 90px;
-    justify-content: center;
+  .contact-graphplusheart {
+    width: 90%;
   }
 
-  .contact1-pic {
-    width: 35%;
+  .contact1-responsiveHeart {
+    width: 205px;
   }
 
-  .contact1-form {
-    width: 55%;
+  .contact1-responsiveHeartImg {
+    width: 150px;
+    margin-left: 20px;
+  }
+
+  .contact1-responsiveGraphDiv {
+    width: 10px;
+  }
+
+  .contact1-responsiveGraph {
+    width: 320px;
+  }
+
+  .contact1-form-title {
+    font-size: 21px;
+  }
+
+  .contact1-title {
+    font-size: 21px;
   }
 }
 
@@ -371,8 +398,37 @@ textarea.input1 + .shadow-input1 {
 
 @media (max-width: 576px) {
   .container-contact1 {
-    padding: 90px 15px 88px 15px;
+    padding: 0px 15px 88px 15px;
     justify-content: center;
+  }
+
+  .contact-graphplusheart {
+    width: 90%;
+  }
+
+  .contact1-responsiveHeart {
+    width: 205px;
+  }
+
+  .contact1-responsiveHeartImg {
+    width: 150px;
+    margin-left: 20px;
+  }
+
+  .contact1-responsiveGraphDiv {
+    width: 10px;
+  }
+
+  .contact1-responsiveGraph {
+    width: 320px;
+  }
+
+  .contact1-form-title {
+    font-size: 21px;
+  }
+
+  .contact1-title {
+    font-size: 21px;
   }
 }
 
@@ -409,8 +465,7 @@ textarea.input1 + .shadow-input1 {
 
   visibility: hidden;
   opacity: 0;
-
-  -webkit-transition: opacity 0.4s;
+-webkit-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
   -moz-transition: opacity 0.4s;
   transition: opacity 0.4s;
