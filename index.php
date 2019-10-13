@@ -100,13 +100,13 @@ text/css" href="css/util.css">
 
  <div class="contact1">
   <div class="container-contact1">
-   <div class="contact-graphplusheart">
+   <div>
     <div class="contact1-pic js-tilt contact1-responsiveHeart" data-tilt style="margin-bottom: 40px; display:block; margin: auto;">
      <img class="contact1-responsiveHeartImg" src="images/cardio.png" alt="IMG">
      <span class="contact1-title">Palpita</span>
     </div>
  
-    <div class="contact1-responsiveGraphDiv" style="display: grid; margin-bottom: 40px;">
+    <div class="contact1-responsiveGraphDiv" style="margin-bottom: 40px;">
      <img class="contact1-responsiveGraph" src="teste.png" title="Graph" />
      <img class="contact1-responsiveGraph" src="teste2.png" title="Graph 2" />
      <img class="contact1-responsiveGraph" src="teste3.png" title="Graph 3" />
