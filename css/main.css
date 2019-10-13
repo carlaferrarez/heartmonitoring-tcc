@@ -198,7 +198,7 @@ iframe {
   display: block;
   font-family: Montserrat-ExtraBold;
   font-size: 24px;
-  color: #C71585;
+  color: #FF1493;
   line-height: 1.2;
   text-align: center;
   padding-bottom: 44px;
@@ -369,7 +369,7 @@ textarea.input1 + .shadow-input1 {
   }
 
   .contact1-responsiveGraph {
-    width: 320px;
+    width: 305px;
   }
 
   .contact1-form-title {
@@ -378,6 +378,7 @@ textarea.input1 + .shadow-input1 {
 
   .contact1-title {
     font-size: 21px;
+    margin-right: 16px;
   }
 }
 
