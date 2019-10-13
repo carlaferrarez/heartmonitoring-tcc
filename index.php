@@ -77,7 +77,6 @@ echo '
 	<title>Palpita</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="1" />
 	<!-- <meta http-equiv="refresh" content="1" /> -->
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/cardio.ico"/>
