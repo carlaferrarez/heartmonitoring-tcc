@@ -60,16 +60,22 @@ exec ('gpio -x mcp3004:100:0 aread 100', $p0);
 //exec ('cat teste.log 2>&1');
 //exec ('sh teste.sh 2>&1');
 //exec ('sh teste.sh > teste.log 2>&1');
-//exec ('rrdtool create teste.rrd --start 1565353931 --step=4 \DS:memory:GAUGE:600:U:U RRA:AVERAGE:0.5:1:24 2>&1');
+//exec ('rrdtool create teste.rrd --start 1565353931 --step=4 \DS:memory:GAUGE:600:U:U RRA:AVERAGE:0.5:1:300 2>&1');
 //exec ('sh teste.log; ls -l teste.rrd 2>&1');
 //exec ('rrdtool fetch teste.rrd AVERAGE --start 1272974830 \--end 1272974871 2>&1');
 //exec ('rrdtool graph teste.png  \--step=4 \DEF:free_memory=teste.rrd:memory:AVERAGE \LINE2:free_memory#FF0000 \--vertical-label "Pulso" \--title "Free System Memory in Time" \--zoom 1.5 \--x-grid SECOND:1:SECOND:4:SECOND:10:0:%X 2>&1');
 
 
+
+//RODAR SE PRECISAR TROCAR A QUANTIDADE DE DADOS
+//rrdtool create teste.rrd --step=4 \DS:memory:GAUGE:300:U:U RRA:AVERAGE:0.5:1:86400 2>&1
+//rrdtool fetch teste.rrd AVERAGE
+
+
 //exec ("rrdtool graph teste.png \--start ".(time()-60)." --end ".time()." \--step=4 \DEF:free_memory=teste.rrd:memory:AVERAGE \LINE2:free_memory#FF0000 \--vertical-label 'Pulso' \--title 'Last Minute' \--zoom 1.5 \--x-grid SECOND:1:SECOND:4:SECOND:10:0:%X 2>&1");
 //exec ("rrdtool graph teste2.png \--start ".(time()-300)." --end ".time()." \--step=4 \DEF:free_memory=teste.rrd:memory:AVERAGE \LINE2:free_memory#FF0000 \--vertical-label 'Pulso' \--title 'Last 5 Minutes' \--zoom 1.5 \--x-grid SECOND:1:SECOND:4:SECOND:60:0:%X 2>&1");
 
-// colocar 24 horas grafico, notificacao, diferenciar dia e noite, validar com outro aparelho, trabalhar pessoas sedentaria e atleta, na propria pessoa, fazer algo movel, fazer testes com temperatura
+
 
 echo ' 
 <html lang="en">
@@ -77,7 +83,7 @@ echo '
  <title>Palpita</title>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
- <!-- <meta http-equiv="refresh" content="1" /> -->
+  <meta http-equiv="refresh" content="30" /> 
 <!--===============================================================================================-->
  <link rel="icon" type="image/png" href="images/icons/cardio.ico"/>
 <!--===============================================================================================-->
@@ -110,6 +116,7 @@ text/css" href="css/util.css">
      <img class="contact1-responsiveGraph" src="teste.png" title="Graph" />
      <img class="contact1-responsiveGraph" src="teste2.png" title="Graph 2" />
      <img class="contact1-responsiveGraph" src="teste3.png" title="Graph 3" />
+     <img class="contact1-responsiveGraph" src="teste4.png" title="Graph 4" />
     </div>
    </div>
    
