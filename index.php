@@ -45,8 +45,18 @@ else {
     
  Teste 12-08
 */
+
 exec ('cd /var/www/html 2>&1');
 exec ('gpio -x mcp3004:100:0 aread 100', $p0);
+$p02 = $p0[0];
+print_r ($p02);
+if ($p02 > '500') {
+print "Valor maior que 500";
+}
+else {
+print "Menor que 500";
+}
+
 //exec ('./executa.sh', $p0);
 //exec ('./executa.sh');
 //print_r($p0);
@@ -121,10 +131,34 @@ text/css" href="css/util.css">
    </div>
    
 
+
    <form class="contact1-form validate-form">
     <span class="contact1-form-title">
-     How about measuring your heart rate?
+     Que tal receber  notificações em tempo real?
     </span>
+
+    <div style="margin-bottom: 20px" class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="$
+    Nível de sedentarismo
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+  </div>
+
+   <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="$
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
 
     <div class="wrap-input1 validate-input" data-validate = "Name is required">
      <input class="input1" type="text" name="name" placeholder="Enter heart rate limit">
