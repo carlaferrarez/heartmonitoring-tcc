@@ -3,6 +3,25 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+require 'firebase-t/vendor/autoload.php';
+require 'vendor/autoload.php';
+
+use Kreait\Firebase\Factory;
+use Kreait\Firebase\ServiceAccount\Discoverer;
+use Kreait\Firebase\ServiceAccount;
+
+$serviceAccount = ServiceAccount::fromJsonFile('firebase-t/secret/palpita-4e78f-67ee331cce35.json');
+
+$firebase = (new Factory)
+   ->withServiceAccount($serviceAccount)
+   ->withDatabaseUri('https://my-project.firebaseio.com')
+   ->create();
+$database = $firebase->getDatabase();
+
+//die(print_r($database));
+
+
+
 /* Leitura dos pinos em array
     exec ( "gpio read 0", $p0);  output
     exec ( "gpio read 2", $p2);  Lo-
@@ -112,6 +131,31 @@ text/css" href="css/util.css">
  <link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web apps Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB6U5NP7UYz-Xd7a5N039kMzctd03aBZE4",
+    authDomain: "palpita-4e78f.firebaseapp.com",
+    databaseURL: "https://palpita-4e78f.firebaseio.com",
+    projectId: "palpita-4e78f",
+    storageBucket: "palpita-4e78f.appspot.com",
+    messagingSenderId: "589229743330",
+    appId: "1:589229743330:web:01649d5c38f946995892bb",
+    measurementId: "G-PCM5347X1W"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
 <body>
 
  <div class="contact1">
@@ -136,29 +180,6 @@ text/css" href="css/util.css">
     <span class="contact1-form-title">
      Que tal receber  notificações em tempo real?
     </span>
-
-    <div style="margin-bottom: 20px" class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="$
-    Nível de sedentarismo
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-  </div>
-
-   <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="$
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-
 
     <div class="wrap-input1 validate-input" data-validate = "Name is required">
      <input class="input1" type="text" name="name" placeholder="Enter heart rate limit">
