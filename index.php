@@ -5,6 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require 'firebase-t/vendor/autoload.php';
 require 'vendor/autoload.php';
+include 'users.php';
 
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount\Discoverer;
@@ -17,6 +18,7 @@ $firebase = (new Factory)
    ->withDatabaseUri('https://my-project.firebaseio.com')
    ->create();
 $database = $firebase->getDatabase();
+
 
 //die(print_r($database));
 
@@ -75,6 +77,13 @@ print "Valor maior que 500";
 else {
 print "Menor que 500";
 }
+
+$sensor = new Sensor();
+var_dump($sensor->insert([
+
+'1' => $p02,
+
+]));
 
 //exec ('./executa.sh', $p0);
 //exec ('./executa.sh');
