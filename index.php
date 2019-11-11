@@ -1,11 +1,13 @@
 
 <?php
 ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+ini_set('dislay_startup_errors', 1);
 error_reporting(E_ALL);
 require 'firebase-t/vendor/autoload.php';
 require 'vendor/autoload.php';
 include 'users.php';
+
+//cd /var/www/html && watch --interval 10 -- sudo bash executa2.sh
 
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount\Discoverer;
@@ -21,6 +23,7 @@ $database = $firebase->getDatabase();
 
 
 //die(print_r($database));
+
 
 
 
@@ -78,6 +81,7 @@ else {
 print "Menor que 500";
 }
 
+
 $sensor = new Sensor();
 var_dump($sensor->insert([
 
@@ -121,7 +125,7 @@ echo '
  <title>Palpita</title>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="30" /> 
+  <meta http-equiv="refresh" content="10" /> 
 <!--===============================================================================================-->
  <link rel="icon" type="image/png" href="images/icons/cardio.ico"/>
 <!--===============================================================================================-->
