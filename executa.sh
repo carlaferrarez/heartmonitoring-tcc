@@ -2,6 +2,14 @@
 
 cd /var/www/html 2>&1
 OUTPUT="$(sudo gpio -x mcp3004:100:0 aread 100)"
+#OUTPUT2=$(firebase database:get /sensor)"
+#IFS=
+#read -ra ADDR <<< "$OUTPUT2"
+#echo ${OUTPUT2}"
+#echo ${ADDR[1]}"
+
+#OUTPUT=${ADDR[1]}"
+
 TIME="$(date +%s)"
 rrdtool update teste.rrd "$TIME":"$OUTPUT" > teste.log
 let "TIME2 = TIME - 60"
